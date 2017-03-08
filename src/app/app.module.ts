@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { AirFormComponent } from './air-form/air-form.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AirFormComponent
+    AirFormComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
