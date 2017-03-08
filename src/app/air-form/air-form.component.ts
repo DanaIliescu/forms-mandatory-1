@@ -18,7 +18,8 @@ export class AirFormComponent implements OnInit {
       destinationCity: ['', Validators.required],
       twoWay: [false, Validators.required],
       departureDate: ['', Validators.required],
-      returnDate: ['', ]
+      returnDate: ['', ],
+      passengers: [1, Validators.required]
     });
   }
 
