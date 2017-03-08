@@ -1,0 +1,13 @@
+<form [formGroup]="mainForm"
+  (ngSubmit)="onSubmit()"
+>
+
+    <div>
+      <input type="text"
+        name="departureCity"
+        placeholder="Departure City"
+        id="departureCity"
+        formControlName="departureCity"
+      >
+    </div>
+</form>
