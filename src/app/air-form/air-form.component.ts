@@ -15,9 +15,10 @@ export class AirFormComponent implements OnInit {
   ngOnInit() {
     this.mainForm = this.formBuilder.group({
       departureCity: ['', Validators.required],
-      arrivalCity: ['', Validators.required],
+      destinationCity: ['', Validators.required],
+      twoWay: [false, Validators.required],
       departureDate: ['', Validators.required],
-      arrivalDate: ['', Validators.required]
+      returnDate: ['', ]
     });
   }
 

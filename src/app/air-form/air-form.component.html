@@ -13,28 +13,39 @@
 
     <div>
       <input type="text"
-        name="arrivalCity"
-        placeholder="Arrival City"
-        id="arrivalCity"
-        formControlName="arrivalCity"
+        name="destinationCity"
+        placeholder="Destination City"
+        id="destinationCity"
+        formControlName="destinationCity"
       >
     </div>
 
     <div>
+      <input type="checkbox"
+        name="twoWay"
+        id="twoWay"
+        formControlName="twoWay"
+      >
+      Two-way flight
+    </div>
+
+    <div>
+      <label for="departureDate">Departure</label>
+
       <input type="date"
         name="departureDate"
-        placeholder="Departure Date"
         id="departureDate"
         formControlName="departureDate"
       >
     </div>
 
-    <div>
+    <div *ngIf="mainForm.value.twoWay">
+      <label for="returnDate">Return</label>
+
       <input type="date"
-        name="arrivalDate"
-        placeholder="Arrival Date"
-        id="arrivalDate"
-        formControlName="arrivalDate"
+        name="returnDate"
+        id="returnDate"
+        formControlName="returnDate"
       >
     </div>
 
