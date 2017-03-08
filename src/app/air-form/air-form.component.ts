@@ -21,4 +21,12 @@ export class AirFormComponent implements OnInit {
     });
   }
 
+  onSubmit(): void {
+    if (this.mainForm.valid) {
+      console.log("submitted", this.mainForm.value);
+    }
+
+    else console.log("the form is not valid!");
+  }
+
 }
