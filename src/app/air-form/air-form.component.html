@@ -1,8 +1,9 @@
 <form [formGroup]="mainForm"
   (ngSubmit)="onSubmit()"
 >
-
+    <div id="formContainer">
     <div>
+      <label for="departureCity">From</label>
       <input type="text"
         name="departureCity"
         placeholder="Departure City"
@@ -12,6 +13,7 @@
     </div>
 
     <div>
+      <label for="destinationCity">To</label>
       <input type="text"
         name="destinationCity"
         placeholder="Destination City"
@@ -20,14 +22,7 @@
       >
     </div>
 
-    <div>
-      <input type="checkbox"
-        name="twoWay"
-        id="twoWay"
-        formControlName="twoWay"
-      >
-      Two-way flight
-    </div>
+
 
     <div>
       <label for="departureDate">Departure</label>
@@ -60,4 +55,14 @@
     </div>
 
     <button type="submit" name="search">Search</button>
+
+    </div>
+    <div id="checkboxDiv">
+      <input type="checkbox"
+        name="twoWay"
+        id="twoWay"
+        formControlName="twoWay"
+      >
+      Two-way flight
+    </div>
 </form>

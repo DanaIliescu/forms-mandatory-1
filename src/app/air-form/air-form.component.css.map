@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,IAAK;EACD,UAAU,EAAE,IAAI;EAChB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;EACtB,WAAW,EAAE,MAAM;EACnB,eAAe,EAAE,MAAM;;AAG3B,cAAe;EACX,OAAO,EAAC,IAAI;EACZ,aAAa,EAAE,aAAa;;AAGhC,KAAM;EACF,OAAO,EAAE,KAAK",
+"sources": ["air-form.component.scss"],
+"names": [],
+"file": "air-form.component.css"
+}
