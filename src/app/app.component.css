@@ -6,6 +6,7 @@
 body {
     background: url(../background.jpg) no-repeat;
     background-size: cover;
+    max-width: 100vw;
 }
 
 footer {
@@ -14,5 +15,6 @@ footer {
     height: 7vh;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    max-width: 100vw;
 }

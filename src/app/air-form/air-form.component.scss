@@ -1,5 +1,7 @@
 @import '../app.mixins.scss';
 $errorBgColor: #a8252e;
+$formDivColor: #2a88ad;
+$lightBlack: #061419;
 
 * {
     margin: 0;
@@ -7,9 +9,8 @@ $errorBgColor: #a8252e;
 }
 
 form {
-    background: rgba(0, 0, 0, .6);
-    min-height: 83vh;
-    color: lightsteelblue;
+    background: rgba(0, 0, 0, .5);
+    min-height: 85vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,8 +21,21 @@ form {
 }
 
 #formContainer {
+    padding: 1vw;
+    background-color: rgba(0, 119, 158, .9);
+    border-radius: 4px;   
+    color: white;
+}
+
+#inputContainer {
     display:flex;
     align-content: space-between;
+}
+
+#checkboxDiv{
+    @include fontStack($size:1.1vw, $family:'Helvetica', $weight:400);
+    align-self: flex-start;
+    margin-left: 19%;
 }
 
 label {
@@ -49,15 +63,10 @@ input:not([type=checkbox]) {
     }
 }   
 
-#checkboxDiv{
-    @include fontStack($size:1.1vw, $family:'Helvetica', $weight:400);
-    align-self: flex-start;
-    margin-left: 19%;
-}
-
 button {
     @include fontStack($size:1.3vw, $family:'Helvetica', $weight:100);
-    color: darkslategrey;
+    color: white;
+    background: #F07F4A;
     height: 7vh;
     border: none;
     padding: 8px 14px;
@@ -73,39 +82,125 @@ button {
     }
 }
 
-@media (max-width: 700px) {
-  form {
-      justify-content: space-around;
-  }
-}
+// @media (max-width: 700px) {
+//   form {
+//       justify-content: space-around;
+//   }
+// }
 
-@media (max-width: 400px) {
+// @media (max-width: 400px) {
 
-}
+// }
 
-.error {
-    @include fontStack($size:12px, $weight:400);
-    background: $errorBgColor;
-    color: white;
-    display: block;
-    position: absolute;
-    bottom: 50%;
-    line-height: 14px;
-    letter-spacing: .25px;
-    padding: 4px 6px 5px;
-    margin-left: 0.5em;
-    margin-bottom: -3px;
+// .error {
+//     @include fontStack($size:12px, $weight:400);
+//     background: $errorBgColor;
+//     color: white;
+//     display: block;
+//     position: absolute;
+//     bottom: 50%;
+//     line-height: 14px;
+//     letter-spacing: .25px;
+//     padding: 4px 6px 5px;
+//     margin-left: 0.5em;
+//     margin-bottom: -3px;
 
-    &::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 100%;
-        left: 10px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 3px 5px 0 5px;
-        border-color: $errorBgColor transparent transparent transparent;
-    }
-}
+//     &::after {
+//         content: '';
+//         display: block;
+//         position: absolute;
+//         top: 100%;
+//         left: 10px;
+//         width: 0;
+//         height: 0;
+//         border-style: solid;
+//         border-width: 3px 5px 0 5px;
+//         border-color: $errorBgColor transparent transparent transparent;
+//     }
+// }
+
+// /*Phones & tablets, landscape*/
+// @media only screen 
+//   and (min-device-width: 320px) 
+//   and (-webkit-min-device-pixel-ratio: 2)
+//   and (orientation: landscape) {
+//     #hello_title {
+//       font-size: 15em;
+//     }
+
+//     #summary {
+//       font-size: 3vw;
+//     }
+
+//     #explore {
+//       position: static;
+//       font-size: 2.5vw;
+//     }
+
+//     #professional h2, #personal h2 {
+//       font-size: 4vw;
+//   }
+
+//   #professional p, #personal p {
+//     font-size: 2.5vw;
+//     padding: 0px;
+//   }
+// }
+
+
+// /*Common desktops, landscape*/
+// @media only screen 
+//   and (min-device-width: 800px) 
+//   and (-webkit-min-device-pixel-ratio: 2)
+//   and (orientation: landscape) {
+//     #summary {
+//       font-size: 2.5vw;
+//     }
+
+//     #explore {
+//       position: static;
+//       font-size: 2.5vw;
+//     }
+
+//     #professional p, #personal p {
+//       font-size: 2.5vw;
+//       padding: 0px;
+//   }
+//   #professional h2, #personal h2 {
+//       font-size: 4vw;
+//   }
+
+//   .col-lg-6 {
+//     min-height: 100vh !important;
+//   }
+// }
+
+// /*Wide screens*/
+// @media only screen 
+//   and (min-device-width: 1268px)  {
+//     #hello_title {
+//       font-size: 18vw;
+//     }
+
+//     #summary {
+//       font-size: 2.5vw;
+//     }
+
+//     #explore {
+//       position: static;
+//       font-size: 2vw;
+//     }
+
+//     #professional p, #personal p {
+//     font-size: 2.5vw;
+//     padding: 0px;
+//   }
+
+//   #professional h2, #personal h2 {
+//       font-size: 5vw;
+//   }
+
+//   .col-lg-6 {
+//     min-height: 100vh !important;
+//   }
+// }

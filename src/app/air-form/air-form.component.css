@@ -3,9 +3,8 @@
   padding: 0; }
 
 form {
-  background: rgba(0, 0, 0, 0.6);
-  min-height: 83vh;
-  color: lightsteelblue;
+  background: rgba(0, 0, 0, 0.5);
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,8 +13,21 @@ form {
     margin: 5px; }
 
 #formContainer {
+  padding: 1vw;
+  background-color: rgba(0, 119, 158, 0.9);
+  border-radius: 4px;
+  color: white; }
+
+#inputContainer {
   display: flex;
   align-content: space-between; }
+
+#checkboxDiv {
+  font-family: "Helvetica";
+  font-size: 1.1vw;
+  font-weight: 400;
+  align-self: flex-start;
+  margin-left: 19%; }
 
 label {
   display: block; }
@@ -45,18 +57,12 @@ input:not([type=checkbox]) {
   input:not([type=checkbox])[type=date] {
     color: grey; }
 
-#checkboxDiv {
-  font-family: "Helvetica";
-  font-size: 1.1vw;
-  font-weight: 400;
-  align-self: flex-start;
-  margin-left: 19%; }
-
 button {
   font-family: "Helvetica";
   font-size: 1.3vw;
   font-weight: 100;
-  color: darkslategrey;
+  color: white;
+  background: #F07F4A;
   height: 7vh;
   border: none;
   padding: 8px 14px;
@@ -68,34 +74,5 @@ button {
   button:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer; }
-
-@media (max-width: 700px) {
-  form {
-    justify-content: space-around; } }
-.error {
-  font-family: "Helvetica";
-  font-size: 12px;
-  font-weight: 400;
-  background: #a8252e;
-  color: white;
-  display: block;
-  position: absolute;
-  bottom: 50%;
-  line-height: 14px;
-  letter-spacing: .25px;
-  padding: 4px 6px 5px;
-  margin-left: 0.5em;
-  margin-bottom: -3px; }
-  .error::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 10px;
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 3px 5px 0 5px;
-    border-color: #a8252e transparent transparent transparent; }
 
 /*# sourceMappingURL=air-form.component.css.map */
