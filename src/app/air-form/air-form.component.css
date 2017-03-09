@@ -75,4 +75,57 @@ button {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer; }
 
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  #inputContainer {
+    flex-direction: column; }
+
+  #formContainer {
+    width: 70%; }
+
+  #checkboxDiv, button, input:not([type=checkbox]) {
+    font-size: 5vw; }
+
+  input:not([type=checkbox]) {
+    width: 100%; }
+
+  button {
+    align-self: auto; } }
+@media only screen and (min-device-width: 481px) and (max-device-width: 736px) {
+  #inputContainer {
+    flex-direction: row; }
+
+  #checkboxDiv, button, input:not([type=checkbox]) {
+    font-size: 1.7vw; }
+
+  button {
+    padding: 5px 14px; } }
+@media only screen and (min-device-width: 1024px) and (max-device-width: 1200px) {
+  #checkboxDiv, label, button, input:not([type=checkbox]) {
+    font-size: 2vw; } }
+.error {
+  font-family: "Helvetica";
+  font-size: 12px;
+  font-weight: 400;
+  background: #a8252e;
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 50%;
+  line-height: 14px;
+  letter-spacing: .25px;
+  padding: 4px 6px 5px;
+  margin-left: 0.5em;
+  margin-bottom: -3px; }
+  .error::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 3px 5px 0 5px;
+    border-color: #a8252e transparent transparent transparent; }
+
 /*# sourceMappingURL=air-form.component.css.map */

@@ -1,7 +1,5 @@
 @import '../app.mixins.scss';
 $errorBgColor: #a8252e;
-$formDivColor: #2a88ad;
-$lightBlack: #061419;
 
 * {
     margin: 0;
@@ -82,125 +80,76 @@ button {
     }
 }
 
-// @media (max-width: 700px) {
-//   form {
-//       justify-content: space-around;
-//   }
-// }
+// Phones
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px)     {
+    #inputContainer {
+        flex-direction: column;
+    }
 
-// @media (max-width: 400px) {
+    #formContainer {
+        width: 70%;
+    }
 
-// }
+    #checkboxDiv, button, input:not([type=checkbox]) {
+        font-size: 5vw;
+    }
 
-// .error {
-//     @include fontStack($size:12px, $weight:400);
-//     background: $errorBgColor;
-//     color: white;
-//     display: block;
-//     position: absolute;
-//     bottom: 50%;
-//     line-height: 14px;
-//     letter-spacing: .25px;
-//     padding: 4px 6px 5px;
-//     margin-left: 0.5em;
-//     margin-bottom: -3px;
+    input:not([type=checkbox]) {
+        width: 100%;
+    }
 
-//     &::after {
-//         content: '';
-//         display: block;
-//         position: absolute;
-//         top: 100%;
-//         left: 10px;
-//         width: 0;
-//         height: 0;
-//         border-style: solid;
-//         border-width: 3px 5px 0 5px;
-//         border-color: $errorBgColor transparent transparent transparent;
-//     }
-// }
+    button {
+        align-self: auto;
+    }
 
-// /*Phones & tablets, landscape*/
-// @media only screen 
-//   and (min-device-width: 320px) 
-//   and (-webkit-min-device-pixel-ratio: 2)
-//   and (orientation: landscape) {
-//     #hello_title {
-//       font-size: 15em;
-//     }
+}
 
-//     #summary {
-//       font-size: 3vw;
-//     }
+// Tablets
+@media only screen and (min-device-width: 481px) and (max-device-width: 736px) {
+    #inputContainer {
+        flex-direction: row;
+    }
 
-//     #explore {
-//       position: static;
-//       font-size: 2.5vw;
-//     }
+    #checkboxDiv, button, input:not([type=checkbox]) {
+        font-size: 1.7vw;
+    }
 
-//     #professional h2, #personal h2 {
-//       font-size: 4vw;
-//   }
+    button {
+        padding: 5px 14px;
+    }
+}
 
-//   #professional p, #personal p {
-//     font-size: 2.5vw;
-//     padding: 0px;
-//   }
-// }
+// Small Desktops
+@media only screen and (min-device-width : 1024px) and (max-device-width: 1200px) {
+    #checkboxDiv, label, button, input:not([type=checkbox]) {
+        font-size: 2vw;
+    }
+}
 
+// For the error divs
+.error {
+    @include fontStack($size:12px, $weight:400);
+    background: $errorBgColor;
+    color: white;
+    display: block;
+    position: absolute;
+    bottom: 50%;
+    line-height: 14px;
+    letter-spacing: .25px;
+    padding: 4px 6px 5px;
+    margin-left: 0.5em;
+    margin-bottom: -3px;
 
-// /*Common desktops, landscape*/
-// @media only screen 
-//   and (min-device-width: 800px) 
-//   and (-webkit-min-device-pixel-ratio: 2)
-//   and (orientation: landscape) {
-//     #summary {
-//       font-size: 2.5vw;
-//     }
-
-//     #explore {
-//       position: static;
-//       font-size: 2.5vw;
-//     }
-
-//     #professional p, #personal p {
-//       font-size: 2.5vw;
-//       padding: 0px;
-//   }
-//   #professional h2, #personal h2 {
-//       font-size: 4vw;
-//   }
-
-//   .col-lg-6 {
-//     min-height: 100vh !important;
-//   }
-// }
-
-// /*Wide screens*/
-// @media only screen 
-//   and (min-device-width: 1268px)  {
-//     #hello_title {
-//       font-size: 18vw;
-//     }
-
-//     #summary {
-//       font-size: 2.5vw;
-//     }
-
-//     #explore {
-//       position: static;
-//       font-size: 2vw;
-//     }
-
-//     #professional p, #personal p {
-//     font-size: 2.5vw;
-//     padding: 0px;
-//   }
-
-//   #professional h2, #personal h2 {
-//       font-size: 5vw;
-//   }
-
-//   .col-lg-6 {
-//     min-height: 100vh !important;
-//   }
-// }
+    &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 10px;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 3px 5px 0 5px;
+        border-color: $errorBgColor transparent transparent transparent;
+    }
+}
