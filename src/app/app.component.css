@@ -9,6 +9,10 @@ body {
 }
 
 footer {
-    text-align: center;
-    height: 5vh;
+    background-color: #101010;
+    color: #9d9d9d;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
