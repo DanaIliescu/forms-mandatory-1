@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../background.jpg) no-repeat;
+    background-size: cover;
+}
+
+footer {
+    text-align: center;
+    height: 5vh;
+}

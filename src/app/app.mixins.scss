@@ -1,0 +1,21 @@
+@mixin fontStack($family: 'Helvetica', $size: 14px, $weight: 600){
+	font: {
+		family: $family;
+		size: $size;
+		weight: $weight;
+	}
+}
+
+@mixin transition(){
+	transition: all 0.30s ease-in-out;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+}
+
+@mixin boxSizing($boxSizingValue){
+	box-sizing: $boxSizingValue;
+    -webkit-box-sizing: $boxSizingValue;
+    -moz-box-sizing: $boxSizingValue;
+	-ms-box-sizing: $boxSizingValue;
+}
