@@ -1,5 +1,5 @@
 @import '../app.mixins.scss';
-$errorBgColor: #a8252e;
+@import './air-form.vars.scss';
 
 * {
     margin: 0;
@@ -61,10 +61,19 @@ input:not([type=checkbox]) {
     }
 }   
 
+.btn {
+    color: white;
+    cursor: default;
+    &:hover{
+        background: $btnBackground;
+        color:white;
+    }
+}
+
 button {
     @include fontStack($size:1.3vw, $family:'Helvetica', $weight:100);
     color: white;
-    background: #F07F4A;
+    background: $btnBackground;
     height: 7vh;
     border: none;
     padding: 8px 14px;
@@ -73,10 +82,8 @@ button {
     align-self: flex-end;
     border-radius: 4px;
     font-weight: bolder;
-
     &:hover {
-        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-        cursor: pointer;
+         cursor: pointer;
     }
 }
 
@@ -133,7 +140,7 @@ button {
     color: white;
     display: block;
     position: absolute;
-    bottom: 50%;
+    bottom: 52%;
     line-height: 14px;
     letter-spacing: .25px;
     padding: 4px 6px 5px;
